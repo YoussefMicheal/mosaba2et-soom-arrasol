@@ -1,205 +1,138 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>مسابقة صيام الرسل</title>
-<style>
-  body {
-    font-family: "Arial", sans-serif;
-    direction: rtl;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 20px 40px 40px 40px;
-  }
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  header img {
-    height: 60px;
-    width: auto;
-    border-radius: 8px;
-  }
-  h1 {
-    flex-grow: 1;
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2.2em;
-    margin: 0 20px;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  th, td {
-    padding: 14px 10px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 1.1em;
-  }
-  th {
-    background-color: #2980b9;
-    color: white;
-    font-weight: bold;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f7fb;
-  }
-  h2 {
-    color: #34495e;
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-  /* Responsive */
-  @media (max-width: 600px) {
-    body {
-      padding: 15px 10px 20px 10px;
-    }
-    header {
-      flex-direction: column;
-      gap: 15px;
-    }
-    h1 {
-      font-size: 1.6em;
-      margin: 0;
-    }
-    header img {
-      height: 50px;
-    }
-    th, td {
-      font-size: 1em;
-      padding: 10px 6px;
-    }
-  }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مسابقة صيام الرسل</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        header img {
+            max-height: 70px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0 auto;
+            text-align: center;
+            flex-grow: 1;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            direction: rtl;
+        }
+        th, td {
+            border: 1px solid #aaa;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #ddeeff;
+            font-weight: bold;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f0f8ff;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* مكان الصور على اليمين فوق */
+        .images {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .images img {
+            max-height: 70px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <img src="gospel.jpeg" alt="صورة الإنجيل" id="gospel-image" />
-  <h1>مسابقة صيام الرسل</h1>
-  <img src="marmina.jpeg" alt="صورة مارمينا" id="marmina-image" />
+    <div class="images">
+        <!-- ضع رابط صورة مارمينا هنا -->
+        <img src="marmina.jpeg" alt="مارمينا" />
+        <!-- ضع رابط صورة الإنجيل هنا -->
+        <img src="gospel.jpeg" alt="الإنجيل" />
+    </div>
+    <h1>مسابقة صيام الرسل</h1>
 </header>
 
-<!-- مثال على الأسبوع الأول -->
-<h2>الأسبوع 1 (9 يونيو - 13 يونيو) [اثنين - جمعة]</h2>
 <table>
-  <thead>
-    <tr><th>اليوم</th><th>التاريخ</th><th>الإصحاح</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>الاثنين</td><td>9 يونيو</td><td>أعمال الرسل 1</td></tr>
-    <tr><td>الثلاثاء</td><td>10 يونيو</td><td>أعمال الرسل 2</td></tr>
-    <tr><td>الأربعاء</td><td>11 يونيو</td><td>أعمال الرسل 3</td></tr>
-    <tr><td>الخميس</td><td>12 يونيو</td><td>أعمال الرسل 4</td></tr>
-    <tr><td>الجمعة</td><td>13 يونيو</td><td>أعمال الرسل 5</td></tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th>الأسبوع</th>
+            <th>اليوم والتاريخ</th>
+            <th>القراءة</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- الأسبوع 1: الإثنين - الجمعة -->
+        <tr><td rowspan="5">الأسبوع 1</td><td>الإثنين 9 يونيو</td><td><a href="https://docs.google.com/forms/d/e/1FAIpQLScJGmQvVCw4z8BGMeEzLBtn-Ea4lW8KWTb-VMS99i7dJzfsVg/viewform?usp=dialog" target="_blank">أصحاح 1</a></td></tr>
+        <tr><td>الثلاثاء 10 يونيو</td><td><a href="#" target="_blank">أصحاح 2</a></td></tr>
+        <tr><td>الأربعاء 11 يونيو</td><td><a href="#" target="_blank">أصحاح 3</a></td></tr>
+        <tr><td>الخميس 12 يونيو</td><td><a href="#" target="_blank">أصحاح 4</a></td></tr>
+        <tr><td>الجمعة 13 يونيو</td><td><a href="#" target="_blank">أصحاح 5</a></td></tr>
+
+        <!-- الأسبوع 2: السبت - الجمعة -->
+        <tr><td rowspan="7">الأسبوع 2</td><td>السبت 14 يونيو</td><td><a href="#" target="_blank">أصحاح 6</a></td></tr>
+        <tr><td>الأحد 15 يونيو</td><td><a href="#" target="_blank">أصحاح 7</a></td></tr>
+        <tr><td>الإثنين 16 يونيو</td><td><a href="#" target="_blank">أصحاح 8</a></td></tr>
+        <tr><td>الثلاثاء 17 يونيو</td><td><a href="#" target="_blank">أصحاح 9</a></td></tr>
+        <tr><td>الأربعاء 18 يونيو</td><td><a href="#" target="_blank">أصحاح 10</a></td></tr>
+        <tr><td>الخميس 19 يونيو</td><td><a href="#" target="_blank">أصحاح 11</a></td></tr>
+        <tr><td>الجمعة 20 يونيو</td><td><a href="#" target="_blank">أصحاح 12</a></td></tr>
+
+        <!-- الأسبوع 3: السبت - الجمعة -->
+        <tr><td rowspan="7">الأسبوع 3</td><td>السبت 21 يونيو</td><td><a href="#" target="_blank">أصحاح 13</a></td></tr>
+        <tr><td>الأحد 22 يونيو</td><td><a href="#" target="_blank">أصحاح 14</a></td></tr>
+        <tr><td>الإثنين 23 يونيو</td><td><a href="#" target="_blank">أصحاح 15</a></td></tr>
+        <tr><td>الثلاثاء 24 يونيو</td><td><a href="#" target="_blank">أصحاح 16</a></td></tr>
+        <tr><td>الأربعاء 25 يونيو</td><td><a href="#" target="_blank">أصحاح 17</a></td></tr>
+        <tr><td>الخميس 26 يونيو</td><td><a href="#" target="_blank">أصحاح 18</a></td></tr>
+        <tr><td>الجمعة 27 يونيو</td><td><a href="#" target="_blank">أصحاح 19</a></td></tr>
+
+        <!-- الأسبوع 4: السبت - الجمعة -->
+        <tr><td rowspan="7">الأسبوع 4</td><td>السبت 28 يونيو</td><td><a href="#" target="_blank">أصحاح 20</a></td></tr>
+        <tr><td>الأحد 29 يونيو</td><td><a href="#" target="_blank">أصحاح 21</a></td></tr>
+        <tr><td>الإثنين 30 يونيو</td><td><a href="#" target="_blank">أصحاح 22</a></td></tr>
+        <tr><td>الثلاثاء 1 يوليو</td><td><a href="#" target="_blank">أصحاح 23</a></td></tr>
+        <tr><td>الأربعاء 2 يوليو</td><td><a href="#" target="_blank">أصحاح 24</a></td></tr>
+        <tr><td>الخميس 3 يوليو</td><td><a href="#" target="_blank">أصحاح 25</a></td></tr>
+        <tr><td>الجمعة 4 يوليو</td><td><a href="#" target="_blank">أصحاح 26</a></td></tr>
+
+        <!-- الأسبوع 5: السبت - الخميس (6 أيام فقط) -->
+        <tr><td rowspan="6">الأسبوع 5</td><td>السبت 5 يوليو</td><td><a href="#" target="_blank">أصحاح 27</a></td></tr>
+        <tr><td>الأحد 6 يوليو</td><td><a href="#" target="_blank">أصحاح 28</a></td></tr>
+        <tr><td>الإثنين 7 يوليو</td><td><a href="#" target="_blank">أصحاح 1 (أفسس)</a></td></tr>
+        <tr><td>الثلاثاء 8 يوليو</td><td><a href="#" target="_blank">أصحاح 2 (أفسس)</a></td></tr>
+        <tr><td>الأربعاء 9 يوليو</td><td><a href="#" target="_blank">أصحاح 3 (أفسس)</a></td></tr>
+        <tr><td>الخميس 10 يوليو</td><td><a href="#" target="_blank">أصحاح 4 (أفسس)</a></td></tr>
+
+        <!-- الأسبوع 6: الجمعة فقط -->
+        <tr><td>الجمعة 11 يوليو</td><td><a href="#" target="_blank">أصحاح 5 (أفسس)</a></td></tr>
+        <tr><td>السبت 12 يوليو</td><td><a href="#" target="_blank">أصحاح 6 (أفسس)</a></td></tr>
+    </tbody>
 </table>
 
-    <h2>الأسبوع 2 (14 يونيو - 20 يونيو) [سبت - جمعة]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>السبت</td><td>14 يونيو</td><td>أعمال الرسل 6</td></tr>
-            <tr><td>الأحد</td><td>15 يونيو</td><td>أعمال الرسل 7</td></tr>
-            <tr><td>الاثنين</td><td>16 يونيو</td><td>أعمال الرسل 8</td></tr>
-            <tr><td>الثلاثاء</td><td>17 يونيو</td><td>أعمال الرسل 9</td></tr>
-            <tr><td>الأربعاء</td><td>18 يونيو</td><td>أعمال الرسل 10</td></tr>
-            <tr><td>الخميس</td><td>19 يونيو</td><td>أعمال الرسل 11</td></tr>
-            <tr><td>الجمعة</td><td>20 يونيو</td><td>أعمال الرسل 12</td></tr>
-        </tbody>
-    </table>
-
-    <h2>الأسبوع 3 (21 يونيو - 27 يونيو) [سبت - جمعة]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>السبت</td><td>21 يونيو</td><td>أعمال الرسل 13</td></tr>
-            <tr><td>الأحد</td><td>22 يونيو</td><td>أعمال الرسل 14</td></tr>
-            <tr><td>الاثنين</td><td>23 يونيو</td><td>أعمال الرسل 15</td></tr>
-            <tr><td>الثلاثاء</td><td>24 يونيو</td><td>أعمال الرسل 16</td></tr>
-            <tr><td>الأربعاء</td><td>25 يونيو</td><td>أعمال الرسل 17</td></tr>
-            <tr><td>الخميس</td><td>26 يونيو</td><td>أعمال الرسل 18</td></tr>
-            <tr><td>الجمعة</td><td>27 يونيو</td><td>أعمال الرسل 19</td></tr>
-        </tbody>
-    </table>
-
-    <h2>الأسبوع 4 (28 يونيو - 4 يوليو) [سبت - جمعة]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>السبت</td><td>28 يونيو</td><td>أعمال الرسل 20</td></tr>
-            <tr><td>الأحد</td><td>29 يونيو</td><td>أعمال الرسل 21</td></tr>
-            <tr><td>الاثنين</td><td>30 يونيو</td><td>أعمال الرسل 22</td></tr>
-            <tr><td>الثلاثاء</td><td>1 يوليو</td><td>أعمال الرسل 23</td></tr>
-            <tr><td>الأربعاء</td><td>2 يوليو</td><td>أعمال الرسل 24</td></tr>
-            <tr><td>الخميس</td><td>3 يوليو</td><td>أعمال الرسل 25</td></tr>
-            <tr><td>الجمعة</td><td>4 يوليو</td><td>أعمال الرسل 26</td></tr>
-        </tbody>
-    </table>
-
-    <h2>الأسبوع 5 (5 يوليو - 11 يوليو) [سبت - جمعة]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>السبت</td><td>5 يوليو</td><td>أعمال الرسل 27</td></tr>
-            <tr><td>الأحد</td><td>6 يوليو</td><td>أعمال الرسل 28</td></tr>
-            <tr><td>الاثنين</td><td>7 يوليو</td><td>أفسس 1</td></tr>
-            <tr><td>الثلاثاء</td><td>8 يوليو</td><td>أفسس 2</td></tr>
-            <tr><td>الأربعاء</td><td>9 يوليو</td><td>أفسس 3</td></tr>
-            <tr><td>الخميس</td><td>10 يوليو</td><td>أفسس 4</td></tr>
-            <tr><td>الجمعة</td><td>11 يوليو</td><td>أفسس 5</td></tr>
-        </tbody>
-    </table>
-
-    <h2>الأسبوع 6 (12 يوليو - 13 يوليو) [سبت - أحد]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>السبت</td><td>12 يوليو</td><td>أفسس 6</td></tr>
-            <tr><td>الأحد</td><td>13 يوليو</td><td>انتهاء المسابقة</td></tr>
-        </tbody>
-    </table>
-</body>
-</html>
 </body>
 </html>
