@@ -1,62 +1,109 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>مسابقة صيام الرسل - جدول القراءة</title>
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-            direction: rtl;
-            background: #f9f9f9;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            background: white;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        th {
-            background-color: #2980b9;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f7fb;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مسابقة صيام الرسل</title>
+<style>
+  body {
+    font-family: "Arial", sans-serif;
+    direction: rtl;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 20px 40px 40px 40px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  header img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+  }
+  h1 {
+    flex-grow: 1;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin: 0 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 14px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 1.1em;
+  }
+  th {
+    background-color: #2980b9;
+    color: white;
+    font-weight: bold;
+  }
+  tr:nth-child(even) {
+    background-color: #f2f7fb;
+  }
+  h2 {
+    color: #34495e;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 15px 10px 20px 10px;
+    }
+    header {
+      flex-direction: column;
+      gap: 15px;
+    }
+    h1 {
+      font-size: 1.6em;
+      margin: 0;
+    }
+    header img {
+      height: 50px;
+    }
+    th, td {
+      font-size: 1em;
+      padding: 10px 6px;
+    }
+  }
+</style>
 </head>
 <body>
-    <h1>مسابقة صيام الرسل - جدول القراءة</h1>
 
-    <h2>الأسبوع 1 (9 يونيو - 13 يونيو) [اثنين - جمعة]</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>الإصحاح</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>الاثنين</td><td>9 يونيو</td><td>أعمال الرسل 1</td></tr>
-            <tr><td>الثلاثاء</td><td>10 يونيو</td><td>أعمال الرسل 2</td></tr>
-            <tr><td>الأربعاء</td><td>11 يونيو</td><td>أعمال الرسل 3</td></tr>
-            <tr><td>الخميس</td><td>12 يونيو</td><td>أعمال الرسل 4</td></tr>
-            <tr><td>الجمعة</td><td>13 يونيو</td><td>أعمال الرسل 5</td></tr>
-        </tbody>
-    </table>
+<header>
+  <img src="path-to-gospel-image.jpg" alt="صورة الإنجيل" id="gospel-image" />
+  <h1>مسابقة صيام الرسل</h1>
+  <img src="path-to-marmina-image.jpg" alt="صورة مارمينا" id="marmina-image" />
+</header>
+
+<!-- مثال على الأسبوع الأول -->
+<h2>الأسبوع 1 (9 يونيو - 13 يونيو) [اثنين - جمعة]</h2>
+<table>
+  <thead>
+    <tr><th>اليوم</th><th>التاريخ</th><th>الإصحاح</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>الاثنين</td><td>9 يونيو</td><td>أعمال الرسل 1</td></tr>
+    <tr><td>الثلاثاء</td><td>10 يونيو</td><td>أعمال الرسل 2</td></tr>
+    <tr><td>الأربعاء</td><td>11 يونيو</td><td>أعمال الرسل 3</td></tr>
+    <tr><td>الخميس</td><td>12 يونيو</td><td>أعمال الرسل 4</td></tr>
+    <tr><td>الجمعة</td><td>13 يونيو</td><td>أعمال الرسل 5</td></tr>
+  </tbody>
+</table>
 
     <h2>الأسبوع 2 (14 يونيو - 20 يونيو) [سبت - جمعة]</h2>
     <table>
@@ -152,5 +199,7 @@
             <tr><td>الأحد</td><td>13 يوليو</td><td>انتهاء المسابقة</td></tr>
         </tbody>
     </table>
+</body>
+</html>
 </body>
 </html>
